@@ -435,7 +435,7 @@
     margin-top: -10rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    /* place-items: center; */
+    justify-items:center;
     padding: 5rem;
     grid-row-gap: 15rem;
     max-width: 1200px;
