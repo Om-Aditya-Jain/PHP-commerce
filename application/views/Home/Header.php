@@ -1,5 +1,39 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel='canonical' href='https://ajar-me.com/'>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "Jadeed Ajar General Trading LLC",
+  "url": "https://www.ajar-me.com",
+  "description": "Dubai's premier supplier of door handles, knobs, hinges, and more.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ajar-me.com/product/search_query/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Store",
+  "name": "Jadeed Ajar General Trading - Dubai",
+  "url": "https://www.ajar-me.com",
+  "image": "https://ajar-me.com/assets/ajar-logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Aswaaq Warehouse, 28B Street, AL Qusais Industrial area 5",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "postalCode": "12345",
+    "addressCountry": "AE"
+  },
+  "description": "Your one-stop shop for high-quality door handles, knobs, hinges, and other hardware products in Dubai.",
+  "telephone": "+971 4 229 4540"
+}
+</script>
 <link rel="icon" href="<?= base_url() ?>assets/fav-ajar-logo.png" type="image/gif">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +44,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<title>AJAR</title>
+<title>AJAR - Ajar: Furniture Fittings and Accessories in Dubai</title>
 <style>
   * {
     margin: 0;
@@ -566,7 +600,7 @@
           </ul>
       </li> -->
       <li><a href="<?php echo base_url('download'); ?>" class="navbar-headings">DOWNLOAD</a></li>
-      <li><a href="<?php echo base_url('showroom'); ?>" class="navbar-headings">SHOWROOM</a></li>
+      <li><a href="<?php echo base_url('showroom'); ?>" class="navbar-headings">EXPERIENCE CENTER</a></li>
       <li><a href="<?php echo base_url('contact'); ?>" class="navbar-headings">CONTACT US</a></li>
       <li><span class="glyphicon glyphicon-search" onclick="showSearchBar();"></span></li>
     </ul>
@@ -656,7 +690,7 @@
       </div> -->
 
       <a href="<?php echo base_url('Download'); ?>">DOWNLOAD</a>
-      <a href="<?php echo base_url('Showroom'); ?>">SHOWROOM</a>
+      <a href="<?php echo base_url('Showroom'); ?>">EXPERIENCE CENTER</a>
       <a href="<?php echo base_url('Contact'); ?>">CONTACT US</a>
     </div>
 
@@ -664,7 +698,6 @@
   <div class="search-div" id="search-div">
     <div class="search-bar">
       <form class="search" id="search-form" action="<?php echo base_url('/product/update_search'); ?>" method="POST">
-        <input type="hidden" name="product-id" id="product-id">
         <div class="autocomplete" style="width:100%">
           <input id="myInput" type="text" name="searched-product" placeholder="search here..." autocomplete="off" <?php if (isset($_SESSION['searched-product'])) {
             echo "value = '" . $_SESSION['searched-product'] . "'";
@@ -739,7 +772,7 @@
     product_id.push('<?php echo $p['id']; ?>');
     product_id.push('<?php echo $p['id']; ?>');
   <?php } ?>
-  // console.log(product_id);
+  // console.log(products);
   function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
       the text field element and an array of possible autocompleted values:*/

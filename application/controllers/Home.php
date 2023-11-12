@@ -66,8 +66,9 @@ class Home extends CI_Controller
 		
 		$data['featured_products'] = $this->AdminM->get_featured_products();
 		$data['featured_projects'] = $this->AdminM->get_featured_project();
-		$this->load->view('Home/Header', $data);
-		$this->load->view('Home/Home', $data);
+		$this->load->view('HeaderMetaTag/Home');
+		$this->load->view('Home/HeaderHome', $data);
+		$this->load->view('Home/Home2', $data);
 		$this->load->view('Home/Footer', $data);
 	}
 

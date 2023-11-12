@@ -19,7 +19,8 @@
     }
 
     .heading p {
-        font-size: 15px;
+        font-size: 18px;
+        text-align: justify;
     }
 
     .certificates {
@@ -68,28 +69,38 @@
 <div class="center" id="center">
     <div class="heading">
         <h1>We are Certified</h1>
-        <p>Our manufacturing plant at Vasai houses our Design and Development department, Tool Room, Press Shop, Hardening, Phosphating and Assembly departments and has been certified in ISO 9001: 2015 – Quality Management System, ISO 14001: 2015 – Environmental Management System, ISO 45001: 2018 – Occupational Health & Safety Management System. Our Window Fittings Plant in Palghar has been expanded to increase production capacity.</p>
+        <p>Welcome to Ajar, your trusted source for premium door hardware solutions in Dubai. Our certifications signify
+            our unwavering commitment to quality and safety. Our Locks Certification ensures the security and durability
+            of our products, providing peace of mind for you and your loved ones. Hinges, a crucial component of door
+            functionality, meet the strictest quality standards, guaranteeing smooth operation and reliability.<br/><br/>
+
+            We proudly hold the ISO Certification, emphasizing our dedication to sustainability and environmental
+            responsibility. This certification showcases the exceptional materials and craftsmanship in our products.<br/><br/>
+
+            These certifications demonstrate our transparency and customer-centric approach. Contact us for any
+            questions or additional information. Your satisfaction is our top priority. Thank you for choosing Ajar for
+            trusted door hardware solutions in Dubai</p>
     </div>
     <div class="certificates">
-        <a href="<?php echo base_url('/assets/certificate/License.pdf') ?>" target="_blank" class="certificate">
+        <div class="certificate">
             <img src="<?php echo base_url('/assets/certificate/License.png') ?>" alt="certificate">
-            <p>Certificate - 01</p>
-        </a>
-        <a href="<?php echo base_url('/assets/certificate/BIFMA.pdf') ?>" target="_blank" class="certificate">
+            <p>ISO Certificate</p>
+        </div>
+        <div class="certificate">
             <img src="<?php echo base_url('/assets/certificate/BIFMA.png') ?>" alt="certificate">
-            <p>Certificate - 01</p>
-        </a>
-        <a href="<?php echo base_url('/assets/certificate/HINGES.pdf') ?>" target="_blank" class="certificate">
+            <p>BIFMA Certificate</p>
+        </div>
+        <div class="certificate">
             <img src="<?php echo base_url('/assets/certificate/HINGES.png') ?>" alt="certificate">
-            <p>Certificate - 01</p>
-        </a>
-        <a href="<?php echo base_url('/assets/certificate/LOCKS.pdf') ?>" target="_blank" class="certificate">
+            <p>HINGES Certificate</p>
+        </div>
+        <div class="certificate">
             <img src="<?php echo base_url('/assets/certificate/LOCKS.png') ?>" alt="certificate">
-            <p>Certificate - 01</p>
-        </a>
-        <a href="<?php echo base_url('/assets/certificate/Diploma.pdf') ?>" target="_blank" class="certificate">
+            <p>LOCKS Certificate</p>
+        </div>
+        <div class="certificate">
             <img src="<?php echo base_url('/assets/certificate/Diploma.png') ?>" alt="certificate">
-            <p>Certificate - 01</p>
-        </a>
+            <p>GAI Certificate</p>
+        </div>
     </div>
 </div>

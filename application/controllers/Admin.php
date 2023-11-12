@@ -19,6 +19,10 @@ class Admin extends CI_Controller
         }
         $this->load->view('Admin/Login');
     }
+    public function logout(){
+        $_SESSION['user']=null;
+        redirect(base_url('/admin'));
+    }
 
     public function login()
     {

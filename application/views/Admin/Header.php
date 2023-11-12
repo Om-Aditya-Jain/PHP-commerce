@@ -86,8 +86,9 @@ foreach ($products as $p) {
             <a href=<?php echo base_url('admin/home') ?>><i class="fa fa-gift"></i> Products</a>
             <a href=<?php echo base_url('admin/enquiry') ?>><i class="fa fa-envelope"></i> Enquiries</a>
             <a href=<?php echo base_url('admin/messages') ?>><i class="fa fa-comments"></i> Messages</a>
-            <a href=<?php echo base_url('admin/featuredProject') ?>><i class="fa fa-envelope"></i> Featured Project</a>
-            <a href=<?php echo base_url('admin/featuredProduct') ?>><i class="fa fa-comments"></i> Featured Products</a>
+            <a href=<?php echo base_url('admin/featuredProject') ?>><i class="fa fa-tags"></i>Featured Project</a>
+            <a href=<?php echo base_url('admin/featuredProduct') ?>><i class="fa fa-gift"></i>Featured Products</a>
+            <a href=<?php echo base_url('admin/logout') ?>><i class="fa fa-sign-out"></i>Logout</a>
         </div>
     </div>
 </div>

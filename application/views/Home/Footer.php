@@ -156,15 +156,23 @@
         margin: 0;
         display: flex;
         align-items: center;
-        height: 40px;
+        justify-content: space-between;
+        
         background-color: #717070;
         font-size: 16px;
-        padding-left: 2rem;
+        padding-inline: 2rem;
         color: white;
+        @media screen and (max-width:450px){
+        align-items:start;
+        flex-direction:column;
+        }
     }
 
     .uppercase {
         text-transform: uppercase;
+    }
+    .powered{
+        color: red;
     }
 </style>
 <div class="footer">
@@ -231,5 +239,5 @@
             </ul>
         </div>
     </div>
-    <div class="lower">&copy; All Rights Reserved</div>
+    <div class="lower"><p>&copy; All Rights Reserved</p><p>Powered By <a href="https://eloquent-kelpie-20dbab.netlify.app/" class="powered">Aashyana Soln</a></p></div>
 </div>

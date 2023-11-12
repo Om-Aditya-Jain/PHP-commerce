@@ -8,19 +8,20 @@
 
         @media screen and (max-width:600px) {
             padding-top: 70px;
-            padding-inline: 2rem;
+            padding-inline: 3rem;
         }
     }
 
     .heading {
         font-size: 35px;
         text-decoration: underline;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
 
         @media screen and (max-width:600px) {
             font-size: 25px;
             text-decoration: none;
+            text-align: center;
         }
     }
 
@@ -30,7 +31,7 @@
         justify-content: center;
         overflow: hidden;
         border-radius: 15px;
-
+        height: 70vh;
     }
 
     .video_container {
@@ -84,6 +85,7 @@
             @media screen and (max-width:576px) {
                 flex-direction: column;
                 height: auto;
+                justify-content: center;
             }
         }
     }
@@ -96,6 +98,7 @@
         @media screen and (max-width:576px) {
             width: 100%;
             height: 200px;
+            text-align: center;
         }
     }
 
@@ -107,15 +110,21 @@
         @media screen and (max-width:576px) {
             width: 100%;
             height: 200px;
+            text-align: center;
         }
     }
 
     .showroom_image1 img,
     .showroom_image2 img,
     .showroom_image3 img {
-        width: 100%;
+        width: 100%; 
         height: 100%;
         border-radius: 15px;
+        filter: drop-shadow(2px 2px 2px black);
+        
+        @media screen and (max-width:576px) {
+            width: 200px;
+        }
     }
 
     .modal {
@@ -160,7 +169,7 @@
     <div class="video_container">
         <div class="showroom_video">
             <video class="rounded" controls autoplay>
-                <source src="<?php echo base_url('/assets/showroom.mp4'); ?>" type="video/mp4">
+                <source src="<?php echo base_url('/assets/video/Ajar_Video.mp4'); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -168,43 +177,43 @@
     <div class="images">
         <div class="showroom_images">
             <div class="showroom_image1">
-                <img id="image1" onclick="openModal(id)" src="<?php echo base_url('/assets/office.png'); ?>"
+                <img id="image1" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/1.jpg'); ?>"
                     alt="featured product">
             </div>
             <div class="showroom_image2">
-                <img id="image2" onclick="openModal(id)" src="<?php echo base_url('/assets/handles.png'); ?>"
+                <img id="image2" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/2.jpg'); ?>"
                     alt="featured product">
             </div>
             <div class="showroom_image3">
-                <img id="image3" onclick="openModal(id)" src="<?php echo base_url('/assets/hinges.png'); ?>"
+                <img id="image3" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/3.jpg'); ?>"
                     alt="featured product">
             </div>
         </div>
         <div class="showroom_images">
             <div class="showroom_image2">
-                <img id="image4" onclick="openModal(id)" src="<?php echo base_url('/assets/handles.png'); ?>"
+                <img id="image4" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/4.jpg'); ?>"
                     alt="featured product">
             </div>
             <div class="showroom_image3">
-                <img id="image5" onclick="openModal(id)" src="<?php echo base_url('/assets/hinges.png'); ?>"
+                <img id="image5" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/5.jpg'); ?>"
                     alt="featured product">
             </div>
             <div class="showroom_image1">
-                <img id="image6" onclick="openModal(id)" src="<?php echo base_url('/assets/office.png'); ?>"
+                <img id="image6" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/6.jpg'); ?>"
                     alt="featured product">
             </div>
         </div>
         <div class="showroom_images">
             <div class="showroom_image1">
-                <img id="image7" onclick="openModal(id)" src="<?php echo base_url('/assets/office.png'); ?>"
+                <img id="image7" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/7.jpg'); ?>"
                     alt="featured product">
             </div>
             <div class="showroom_image2">
-                <img id="image8" onclick="openModal(id)" src="<?php echo base_url('/assets/handles.png'); ?>"
+                <img id="image8" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/8.jpg'); ?>"
                     alt="featured product">
             </div>
             <div class="showroom_image3">
-                <img id="image9" onclick="openModal(id)" src="<?php echo base_url('/assets/hinges.png'); ?>"
+                <img id="image9" onclick="openModal(id)" src="<?php echo base_url('/assets/showroom/9.jpg'); ?>"
                     alt="featured product">
             </div>
         </div>

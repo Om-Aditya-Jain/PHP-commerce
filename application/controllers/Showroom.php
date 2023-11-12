@@ -26,6 +26,7 @@ class Showroom extends CI_Controller
 			$i++;
 		}
 		$data['product_category'] = $this->AdminM->get_category();
+		$this->load->view('HeaderMetaTag/Showroom');
 		$this->load->view('Home/Header',$data);
 		$this->load->view('Showroom/showroom');
 		$this->load->view('Home/Footer');
