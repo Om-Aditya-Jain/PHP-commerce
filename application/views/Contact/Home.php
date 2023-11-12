@@ -221,16 +221,17 @@
         margin: 0;
     }
 
-    .icons {
+    .socialicons {
         display: flex;
         justify-content: center;
         padding-top: 5%;
         padding-bottom: 5%;
+        gap: 3rem;
     }
 
-    .icons img {
-        width: 30px;
-        height: 30px;
+    .socialicons img {
+        width: 35px;
+        height: 57px;
     }
 
     .form {
@@ -326,7 +327,7 @@
                 width="100%" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46300.26504240684!2d55.36514295645879!3d25.27616215552678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f917e701c6b%3A0x535f35b03c2d1aca!2sAswaaq%20warehouse!5e0!3m2!1sen!2sin!4v1697810264917!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.422240962693!2d55.404408!3d25.290014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f753dbaa40d%3A0x204bc12c059a20a5!2sJadeed%20Ajar!5e0!3m2!1sen!2sin!4v1699541439874!5m2!1sen!2sin"
                 width="100%" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -342,7 +343,7 @@
                         </svg></div>
                     <div class="text">
                         <p class="detail-heading">Head Office</p>
-                        <p style="font-size:20px;">Aswaaq Warehouse #13, Industrial Area 5, Al Qusais.
+                        <p style="font-size:20px;">Jadeed AJAR General Trading, Industrial Area 5, Al Qusais.
                             Dubai U.A.E </p>
                     </div>
                 </div>
@@ -366,10 +367,10 @@
                     <div class="text">
                         <p class="detail-heading">Call-us</p>
                         <p style="font-size:20px;">
-                            Tel. Number - +971 4 229 4540</p>
+                            +971 4 229 4540</p>
                     </div>
                 </div>
-                <div class="icons">
+                <div class="socialicons">
                     <img src="<?php echo base_url('/assets/icons/facebook.svg') ?>" alt="facebook">
                     <img src="<?php echo base_url('/assets/icons/instagram.svg') ?>" alt="instagram">
                     <img src="<?php echo base_url('/assets/icons/youtube.svg') ?>" alt="youtube">

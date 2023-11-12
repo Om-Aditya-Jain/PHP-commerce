@@ -217,7 +217,7 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea name="description" rows="5" cols="50" required class="form-control"></textarea>
+            <textarea name="description" rows="5" cols="50" required class="form-control">Description (note:don't include semicolon(;)</textarea>
         </div>
         <div class="mb-3">
             <button type="submit" value="Add" class="btn btn-primary" name="submit">Add</button>

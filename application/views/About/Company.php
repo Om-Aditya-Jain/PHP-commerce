@@ -112,7 +112,7 @@
         @media screen and (max-width:1000px) {
             width: 60%;
 
-            @media screen and (max-width:768px) {
+            @media screen and (max-width:806px) {
                 margin: auto;
                 margin-top: -18rem;
                 width: 100%;
@@ -132,32 +132,70 @@
     }
 
     .mission-div {
-        width: 50%;
-        max-width: 670px;
-        height: auto;
-        margin-top: 7rem;
-        margin-bottom: -17rem;
-        padding-left: 10rem;
-        padding-right: 3rem;
-        background-color: #717070;
-        color: white;
-        border-radius: 15px;
-        font-size: 15px;
+    width: 50%;
+    max-width: 670px;
+    height: auto;
+    margin-top: 7rem;
+    padding-left: 10rem;
+    padding-right: 3rem;
+    background-color: #717070;
+    color: white;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-bottom: -5rem;
+}
 
-        @media screen and (max-width:1000px) {
-            padding-right: 2rem;
-            margin-bottom: -23rem;
-            width: 60%;
-
-            @media screen and (max-width:768px) {
-                width: 90%;
-                position: absolute;
-                padding: 2rem 3rem;
-                margin: 0rem;
-                top: 60%;
-            }
-        }
+@media screen and (max-width: 1390px) {
+    .mission-div {
+        margin-bottom: -16rem;
     }
+}
+
+@media screen and (max-width: 1330px) {
+    .mission-div {
+        margin-bottom: -15rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .mission-div {
+        margin-bottom: -27rem;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .mission-div {
+        margin-bottom: -17rem;
+    }
+}
+@media screen and (max-width: 990px) {
+    .mission-div {
+        margin-bottom: -20rem;
+    }
+}
+@media screen and (max-width: 923px) {
+    .mission-div {
+        margin-bottom: -25rem;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .mission-div {
+        padding-right: 2rem;
+        margin-bottom: -19rem;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 806px) {
+    .mission-div {
+        width: 90%;
+        position: absolute;
+        padding: 2rem 3rem;
+        margin: 0rem;
+        top: 60%;
+    }
+}
+
 
     .mission-div h1 {
         @media screen and (max-width:500px) {
@@ -223,7 +261,7 @@
     .foundation-card {
         background-color: white;
         border-radius: 1rem;
-        width: 250px;
+        width: 280px;
         margin-top: 5rem;
     }
 
@@ -429,8 +467,9 @@
                     Passion
                 </div>
                 <div class="foundation-card-body">
-                    Passion is the energy, commitment and enthusiasm that inspire us to achieve the never-ending pursuit
-                    of excellence.
+                    At Ajar, our passion fuels our commitment to delivering excellence in the world of door handles and
+                    kitchen accessories. We're driven by a relentless dedication to quality and design, ensuring that
+                    every product we offer enhances your living spaces with style and functionality.
                 </div>
             </div>
             <div class="foundation-card">
@@ -438,8 +477,9 @@
                     Customer-Centric
                 </div>
                 <div class="foundation-card-body">
-                    Passion is the energy, commitment and enthusiasm that inspire us to achieve the never-ending pursuit
-                    of excellence.
+                    Ajar is all about you, our valued customers. We place your needs at the forefront of our business,
+                    striving to create a seamless and enjoyable shopping experience. Your satisfaction is our ultimate
+                    priority, and we're here to cater to your specific requirements.
                 </div>
             </div>
             <div class="foundation-card">
@@ -447,8 +487,9 @@
                     Trust
                 </div>
                 <div class="foundation-card-body">
-                    Reliability and trust between our company and customers manifests itself through common goals,
-                    respect and fulfilment of our commitments.
+                    Trust in Ajar for high-quality, durable, and stylish door handles and kitchen accessories. Our
+                    reputation is built on trust, and we work diligently to maintain it by consistently delivering
+                    top-tier products that stand the test of time. Your trust is our most valued asset.
                 </div>
             </div>
         </div>

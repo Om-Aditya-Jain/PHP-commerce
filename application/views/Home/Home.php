@@ -4,6 +4,7 @@
     background-color: #EAEAEA;
     padding-top: 90px;
     padding-bottom: 5rem;
+    position: relative;
   }
 
   .mySlides {
@@ -11,7 +12,7 @@
     height: calc(100vh - 100px);
     width: calc(100vw - 50px);
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 7px;
     border-radius: 10px;
 
     @media screen and (max-width:768px) {
@@ -134,8 +135,9 @@
   .featured-div {
     display: flex;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1226px) {
       flex-direction: column;
+      gap: 5rem;
     }
   }
 
@@ -147,15 +149,15 @@
     position: relative;
 
     @media screen and (min-width:500px) {
-      height: 300px;
+      height: 400px;
 
-      @media screen and (min-width:1000px) {
+      @media screen and (min-width:1226px) {
         min-height: 300px;
-        max-height: 300px;
+        max-height: 800px;
         min-width: 600px;
         max-width: 600px;
 
-        @media screen and (min-width:1200px) {
+        @media screen and (min-width:1358px) {
           min-height: 400px;
           max-height: 400px;
           min-width: 800px;
@@ -192,12 +194,15 @@
     }
   }
 
-  @media screen and (min-width: 1000px) {
-    .featured-description p {
-      overflow: hidden;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 8;
+  .featured-description p {
+    text-align: justify;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+
+    @media screen and (min-width: 1226px) {
+    max-width: 575px;
+      /* -webkit-line-clamp: 14; */
     }
   }
 
@@ -256,8 +261,8 @@
     font-size: 18px;
     margin: auto;
 
-    @media screen and (min-width:756px) {
-      width: 600px;
+    @media screen and (min-width:900px) {
+      width: 900px;
     }
   }
 
@@ -345,8 +350,8 @@
     font-size: 18px;
     margin: auto;
 
-    @media screen and (min-width:756px) {
-      width: 600px;
+    @media screen and (min-width:900px) {
+      width: 900px;
     }
   }
 
@@ -354,7 +359,7 @@
     margin: auto;
     margin-top: -15rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(301px, 1fr));
     place-items: center;
     padding: 5rem;
     grid-row-gap: 5rem;
@@ -370,7 +375,7 @@
     background-color: #717070;
     border-radius: 15px;
     padding: 1rem;
-    width: 250px;
+    width: 275px;
   }
 
   .find-card-img {
@@ -416,8 +421,8 @@
     font-size: 18px;
     margin: auto;
 
-    @media screen and (min-width:756px) {
-      width: 600px;
+    @media screen and (min-width:900px) {
+      width: 900px;
     }
   }
 
@@ -685,17 +690,327 @@
     }
   }
 </style>
+<style>
+  /* CSS for the image overlay */
+  .image-overlay {
+    position: absolute;
+    top: -20;
+    left: 20;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: none;
+    padding: 2rem;
+    align-items: flex-end;
+  }
+
+  .overlay-text {
+    color: white;
+    /*text-align: center;*/
+    font-size: 30px;
+    text-transform: capitalize
+  }
+  @media screen and (max-width:768px) {
+    .overlay-text{
+      font-size: 15px;
+    }
+  }
+
+  .featured-img-div:hover .image-overlay {
+    display: flex;
+    cursor: pointer;
+  }
+</style>
+<style>
+  .chatbot {
+    position: fixed;
+    bottom: 30;
+    left: 20;
+    z-index: 1000;
+    margin-right: 10px;
+  }
+
+  .chatbot_icon {
+    padding: 12;
+    width: 50px;
+    height: 50px;
+    background-color: #717070;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .chatbot_body {
+    max-width: 350px;
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .svg_msg {
+    fill: white;
+  }
+
+  .chatbot_header {
+    height: 100px;
+    background-color: #717070;
+    width: 100%;
+    padding-inline: 15px;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px 10px 0 0;
+    gap: 1rem;
+  }
+
+  .chatbot_header p {
+    font-size: 25px;
+    color: white;
+  }
+
+  .chatbot_header img {
+    width: 47px;
+    height: 47px;
+  }
+
+  .chatbot_type {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .chatbot_input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-inline: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chatbot_input form {
+    width: 85%;
+  }
+
+  .line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+
+  .chatbot_send {
+    width: 15%;
+    padding: 13px;
+    aspect-ratio: 1/1;
+  }
+
+  .inside_form {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .chatbot_content {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #FF5733 #E1E1E1;
+  }
+
+  .msg_left {
+    margin-top: 7px;
+    max-width: 300;
+    text-align: left;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .msg_right {
+    margin-top: 7px;
+    text-align: right;
+    margin-left: 100;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .msg_right p {
+    text-align: start;
+    width: 100%;
+  }
+
+  .close_chat {
+    margin-left: auto;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+  }
+</style>
+
+<div class="chatbot">
+  <div class="chatbot_icon" id="chatbot_icon" onclick="openchatbot();">
+    <svg class="svg_msg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path
+        d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z" />
+    </svg>
+  </div>
+  <div class="chatbot_body" id="chatbot_body">
+    <div class="chatbot_header">
+      <img src="<?php echo base_url('/assets/ajar-chatbot-logo.png'); ?>">
+      <p>Chat with us</p>
+      <i class="glyphicon glyphicon-remove close_chat" onclick="close_chat();"></i>
+    </div>
+    <div class="chatbot_content" id="chatbot_content">
+      <div class="msg_left">
+        <p>Hello there! Welcome to Ajar's Chat Bot. We're here to assist you with any questions or information you may
+          need about our premium door hardware solutions, services, or projects.</p>
+
+      </div>
+      <div class="msg_left">
+        <p>To assist you better, may we know your name, please?</p>
+      </div>
+    </div>
+    <div class="line">
+    </div>
+    <div class="chatbot_input" id="chatbot_input">
+      <form>
+        <div class="inside_form">
+          <input type="name" class=" chatbot_type" id="chatbot_msg" name="chatbot_msg" required="true"
+            onkeydown="checkEnterKey(event)" placeholder="Type here.....">
+        </div>
+      </form>
+      <img style="cursor:pointer" onclick="click_send();" src="<?php echo base_url('assets/icons/send.png') ?>"
+        alt="send" class="chatbot_send">
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  let k = 1;
+  function openchatbot() {
+    var chatbot_icon = document.getElementById("chatbot_icon")
+    var chatbot_body = document.getElementById("chatbot_body")
+    chatbot_body.style.display = "flex"
+    chatbot_icon.style.display = "none"
+  }
+  function close_chat() {
+    var chatbot_icon = document.getElementById("chatbot_icon")
+    var chatbot_body = document.getElementById("chatbot_body")
+    chatbot_body.style.display = "none"
+    chatbot_icon.style.display = "block"
+  }
+  function checkEnterKey(event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent the default Enter key behavior (form submission or page reload)
+      click_send(); // Call your click_send function or perform any other action
+    }
+  }
+  function scrollToBottom() {
+    var chatbotContent = document.getElementById("chatbot_content");
+    chatbotContent.scrollTop = chatbotContent.scrollHeight;
+  }
+  let name, email, contact, query;
+  function click_send() {
+    let chatbot_content = document.getElementById("chatbot_content")
+    let inputmsg = document.getElementById("chatbot_msg");
+    let msg = inputmsg.value;
+    inputmsg.value = ""
+    let user_msg = document.createElement('div')
+    user_msg.className = "msg_right"
+    user_msg.innerHTML = `<p>${msg}</p>`
+    chatbot_content.appendChild(user_msg)
+    let new_div = document.createElement('div')
+    new_div.className = "msg_left"
+    switch (k) {
+      case 1:
+        name = msg;
+        new_div.innerHTML = `<p>Thank you, ${name}! Could you kindly share your email address with us for future correspondence?</p>`
+        setTimeout(() => {
+          chatbot_content.appendChild(new_div)
+          scrollToBottom();
+          inputmsg.type = "email"
+        }, 500);
+        break;
+
+      case 2:
+        email = msg;
+        new_div.innerHTML = "<p>Great! Lastly, we'd appreciate your mobile number, just in case we need to reach out to you.</p>"
+        setTimeout(() => {
+          chatbot_content.appendChild(new_div)
+          scrollToBottom();
+          inputmsg.type = "number"
+        }, 500);
+        break;
+
+      case 3:
+        contact = msg;
+        new_div.innerHTML = `<p>Thank you for providing your details, ${name}. How can we assist you today? Please feel free to ask your question or share your query.</p>`
+        setTimeout(() => {
+          chatbot_content.appendChild(new_div)
+          scrollToBottom();
+          inputmsg.type = "name"
+        }, 500);
+        break;
+
+      case 4:
+        query = msg;
+
+        setTimeout(() => {
+          let inputmsg = document.getElementById("chatbot_msg");
+          inputmsg.disabled = true;
+          console.log(name, email, contact, query)
+          $.ajax({
+            type: 'POST',
+            url: "<?php echo base_url('contact/submit_message'); ?>",
+            data: {
+              name,
+              email,
+              contact, message: query
+            },
+            success: function (response) {
+              new_div.innerHTML = `<p>Thank you, ${name}, for reaching out to us. We appreciate your inquiry. Rest assured, our dedicated team will contact you as soon as possible to address your query. Have a wonderful day!</p>`
+              chatbot_content.appendChild(new_div)
+              scrollToBottom();
+            },
+            error: function (error) {
+              new_div.innerHTML = "<p>Sorry We are not able to process your query please try later</p>"
+              chatbot_content.appendChild(new_div)
+            }
+          });
+        }, 500);
+        setTimeout(() => {
+          close_chat();
+        }, 8000);
+        break;
+
+      default:
+        break;
+    }
+    k++;
+    scrollToBottom();
+  }
+</script>
 <div class="home">
 
   <div class="slideshow-container">
-
-    <!-- <div class="mySlides">
-      <img src="<?php echo base_url('/assets/Home.png'); ?>" style="height:100%; width:100%;object-fit:cover;overflow:hidden;">
-    </div>
-
-    <div class="mySlides">
-      <img src="<?php echo base_url('/assets/Home-img.png'); ?>" style="height:100%;width:100%;object-fit:cover;overflow:hidden;">
-    </div> -->
     <?php foreach ($slider_image as $image): ?>
       <div class="mySlides">
         <img src="<?php echo base_url($image['slider_image_url']); ?>" class="slider-image">
@@ -714,29 +1029,45 @@
         <div class="featured-img-div">
           <img src="<?php echo base_url($featured_projects[0]['project_image_url']); ?>" alt="featured product"
             class="featured-img">
+            <div class="image-overlay" id="hover-overlay">
+            <p class="overlay-text">
+          <?php echo $featured_projects[0]['description'] ?>
+            </p>
+          </div>
         </div>
         <div class="featured-description">
           <p>
-            <?php echo $featured_projects[0]['description'] ?>
+            Welcome to the showcase of Ajar's exceptional craftsmanship and innovation in our featured projects. We take
+            pride in the beauty and functionality of our door hardware solutions, and this is where you can witness the
+            magic come to life. From stunning residential makeovers to impressive commercial developments, our gallery
+            unveils the stories behind our commitment to excellence. Immerse yourself in a world of creativity, where
+            every door we touch becomes an opening to endless possibilities and remarkable transformations.
           </p>
-          <div class="featured-buttons">
+          <!-- <div class="featured-buttons">
             <a style="margin-right:3rem;"><img onclick="featuredprevious();"
                 src="<?php echo base_url('/assets/icons/arrow-left.svg') ?>"
                 alt="left arrow icon">&nbsp;&nbsp;Previous</a>
-            <!-- <a><i class="fa fa-long-arrow-left" aria-hidden="true"></i>&nbsp;Previous</a> -->
+            <a><i class="fa fa-long-arrow-left" aria-hidden="true"></i>&nbsp;Previous</a>
             <a>Next&nbsp;&nbsp;<img onclick="featurednext();"
                 src="<?php echo base_url('/assets/icons/arrow-right.svg') ?>" alt="right arrow icon"></a>
-            <!-- <a>Next&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> -->
-          </div>
+            <a>Next&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          </div> -->
         </div>
       </div>
     </div>
   <?php } ?>
+  <script>
+    setInterval(() => {
+      featurednext();
+    }, 4000);
+  </script>
 
   <div class="simplify">
     <div class="simplify-text">
       <h1>Simplify Opening Solutions</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt in accusamus excepturi, ad similique.
+      <p>Discover how Ajar simplifies the art of opening with our wide range of solutions. From architectural hardware
+        to furniture fittings, our products are designed to enhance functionality, style, and ease of use in both
+        architectural and interior design settings
       </p>
     </div>
     <div class="simplify-cards">
@@ -755,7 +1086,9 @@
   <div class="find">
     <div class="find-text">
       <h1>Where Can You Find Our Products?</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt in accusamus excepturi, ad similique.
+      <p>Explore the versatility of Ajar's door hardware solutions, tailored to cater to a wide spectrum of industries
+        and applications. Our products find their place in residential, commercial, healthcare, education, hotel, and
+        government settings, ensuring safety and style across diverse environments.
       </p>
     </div>
     <div class="find-cards">
@@ -796,7 +1129,9 @@
     <div class="products-div">
       <div class="products-text">
         <h1>Products</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt in accusamus excepturi, ad similique.
+        <p>Explore our curated selection of top-quality door hardware solutions, each offering a unique blend of safety,
+          style, and functionality. From hinges to lever handles and locking devices to door closers, our featured
+          products exemplify Ajar's commitment to excellence and choice
         </p>
       </div>
       <div class="products-cards">
@@ -945,11 +1280,12 @@
     }
 
     function updateFeatured() {
-      const featuredImage = document.querySelector(".featured-img");
-      const featuredDescription = document.querySelector(".featured-description p");
+            const featuredImage = document.querySelector(".featured-img");
+      const featuredDescription = document.querySelector(".overlay-text");
 
       featuredImage.src = "<?php echo base_url(); ?>" + featured_projects[featuredIndex]['product_image_url'];
       featuredDescription.textContent = featured_projects[featuredIndex]['product_description'];
+    
     }
 
     function toggle_text(index){

@@ -27,6 +27,7 @@ class Download extends CI_Controller
 			$i++;
 		}
 		$data['product_category'] = $this->AdminM->get_category();
+		$this->load->view('HeaderMetaTag/Download');
 		$this->load->view('Home/Header',$data);
 		$this->load->view('Download/Home');
 		$this->load->view('Home/Footer');

@@ -26,6 +26,7 @@ class Contact extends CI_Controller
 			$i++;
 		}   
 		$data['product_category'] = $this->AdminM->get_category();
+		$this->load->view('HeaderMetaTag/Contact');
 		$this->load->view('Home/Header',$data);
 		$this->load->view('Contact/Home');
 		$this->load->view('Home/Footer',$data);

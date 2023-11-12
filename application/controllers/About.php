@@ -27,6 +27,7 @@ class About extends CI_Controller
 			$i++;
 		}
 		$data['product_category'] = $this->AdminM->get_category();
+		$this->load->view('HeaderMetaTag/About');
 		$this->load->view('Home/Header', $data);
 		$this->load->view('About/Certificate');
 		$this->load->view('Home/Footer',$data);
@@ -46,6 +47,7 @@ class About extends CI_Controller
 			$i++;
 		}
 		$data['product_category'] = $this->AdminM->get_category();
+		$this->load->view('HeaderMetaTag/About');
 		$this->load->view('Home/Header', $data);
 		$this->load->view('About/Company');
 		$this->load->view('Home/Footer',$data);
